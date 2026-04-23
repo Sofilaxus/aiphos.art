@@ -1,121 +1,66 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
+import './index.css';
 
-function App() {
-  const [count, setCount] = useState(0)
+import StarField       from './components/StarField';
+import Navbar          from './components/Navbar';
+import Footer          from './components/Footer';
 
-  return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+import HomePage        from './pages/HomePage';
+import PortfolioPage   from './pages/PortfolioPage';
+import CommissionsPage from './pages/CommissionsPage';
+import ContactPage     from './pages/ContactPage';
+import LinksPage       from './pages/LinksPage';
 
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+// scroll to top whenever the route changes
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => { window.scrollTo({ top: 0, behavior: 'smooth' }); }, [pathname]);
+  return null;
 }
 
-export default App
+function Layout() {
+  return (
+    <>
+      <StarField />
+      <div style={{
+        minHeight: '100vh',
+        position: 'relative',
+        zIndex: 1,
+        background: `
+          radial-gradient(ellipse at 20% 0%,   rgba(80,30,130,.45)  0%, transparent 50%),
+          radial-gradient(ellipse at 80% 10%,  rgba(140,50,100,.25) 0%, transparent 45%),
+          radial-gradient(ellipse at 50% 100%, rgba(40,20,80,.6)    0%, transparent 55%),
+          #16101e
+        `,
+      }}>
+        <ScrollToTop />
+        <Navbar />
+
+        <main>
+          <Routes>
+            {/* bare root redirects to home */}
+            <Route path="/"            element={<Navigate to="/home" replace />} />
+            <Route path="/home"        element={<HomePage />} />
+            <Route path="/portfolio"   element={<PortfolioPage />} />
+            <Route path="/commissions" element={<CommissionsPage />} />
+            <Route path="/contact"     element={<ContactPage />} />
+            <Route path="/links"       element={<LinksPage />} />
+            {/* send unknown URLs to home */}
+            <Route path="*"            element={<Navigate to="/home" replace />} />
+          </Routes>
+        </main>
+
+        <Footer />
+      </div>
+    </>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Layout />
+    </BrowserRouter>
+  );
+}
