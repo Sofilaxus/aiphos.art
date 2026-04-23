@@ -63,13 +63,13 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Recent works strip */}
+      {/* my best works strip */}
       <div style={{ padding: '0 28px 80px', maxWidth: 960, margin: '0 auto', position: 'relative' }}>
         <div style={{
           textAlign: 'center', marginBottom: 22,
           fontFamily: "'Fraunces', serif", fontSize: '1.35rem',
           fontWeight: 300, color: C.mid, fontStyle: 'italic',
-        }}>Recent works</div>
+        }}>My best works (according to me)</div>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(175px,1fr))', gap: 14 }}>
           {HOME_PREVIEWS.map((item, i) => (
