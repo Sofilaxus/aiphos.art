@@ -1,7 +1,7 @@
 // Imports
 import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { SiKofi, SiGumroad, SiDeviantart } from "react-icons/si";
+import { SiKofi, SiGumroad, SiDeviantart, SiGithub } from "react-icons/si";
 
 // Colours
 export const C = {
@@ -256,4 +256,5 @@ export const LINKS = [
     { label: "DeviantArt", handle: "@aiphoss", Icon: SiDeviantart, url: "https://www.deviantart.com/aiphoss", bg: "rgba(80,200,96,.15)", border: "rgba(100,230,115,.28)" },
     { label: "Ko-fi", handle: "Support my work", Icon: SiKofi, url: "https://ko-fi.com/aiphos", bg: "rgba(200,160,60,.15)", border: "rgba(230,190,80,.28)" },
     { label: "Gumroad", handle: "Procreate brushes", Icon: SiGumroad, url: "https://aiphos.gumroad.com", bg: "rgba(200,80,186,.15)", border: "rgba(221,100,230,.28)" },
+    { label: "Github", handle: "My github page where the website is hosted", Icon: SiGithub, url: "https://github.com/Sofilaxus", bg: "rgba(200,80,186,.15)", border: "rgba(221,100,230,.28)" },
 ];
