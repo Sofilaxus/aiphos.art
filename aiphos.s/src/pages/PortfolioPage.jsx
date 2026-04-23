@@ -1,7 +1,7 @@
 import { useState }           from 'react';
 import PortraitOutlinedIcon   from '@mui/icons-material/PortraitOutlined';
 import { ART, C }             from '../constants';
-import { PageHeader, DevNote } from '../components/Shared';
+import { PageHeader } from '../components/Shared';
 import Lightbox               from '../components/Lightbox';
 
 const ICON_MAP = { Portrait: PortraitOutlinedIcon };

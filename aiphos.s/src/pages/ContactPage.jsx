@@ -1,7 +1,7 @@
 import { useState }              from 'react';
 import FavoriteBorderIcon        from '@mui/icons-material/FavoriteBorder';
 import { C }                     from '../constants';
-import { PageHeader, DevNote, Label } from '../components/Shared';
+import { PageHeader, Label } from '../components/Shared';
 
 const EMAIL = 'aiphos.s.art@gmail.com';
 
