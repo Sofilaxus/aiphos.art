@@ -75,7 +75,7 @@ export const HOME_PREVIEWS = [
 export const ART = [
     { id: 1, src: "/art/fMoon.png", title: "Feyre on the Moon", tags: ["Fanart", "ACOTAR", "Semi"], aspect: "4/5", col: ["#2a1840", "#4a2060"], icon: "Portrait" },
     { id: 2, src: "/art/ocSchool.png", title: "Soraia, James, and Skyler", tags: ["OC", "Full Illustration"], aspect: "1/1", col: ["#1a2840", "#203060"], icon: "Portrait" },
-    { id: 3, src: "/art/sketches.png", title: "Sketches", tags: ["Sketch"], aspect: "16/10", col: ["#1a2838", "#184060"], icon: "Portrait" },
+    { id: 3, src: "/art/sketches.png", title: "Sketches", tags: ["Sketch", "Study"], aspect: "16/10", col: ["#1a2838", "#184060"], icon: "Portrait" },
     { id: 4, src: "/art/a.png", title: "Queen Aelin Ashryver Galathynius", tags: ["Fanart", "Semi"], aspect: "4/5", col: ["#2a1830", "#601840"], icon: "Portrait" },
     { id: 5, src: "/art/xv.png", title: "Xaden and Violet", tags: ["Fanart", "Full Illustration"], aspect: "4/5", col: ["#201828", "#402858"], icon: "Portrait" },
     { id: 6, src: "/art/oc.png", title: "Self Portrait", tags: ["Full Illustration"], aspect: "4/5", col: ["#201828", "#402858"], icon: "Portrait" },
@@ -93,6 +93,8 @@ export const ART = [
     { id: 18, src: "/art/frWedding.png", title: "Feyre and Rhysand - Wedding", tags: ["Fanart", "ACOTAR", "Full Illustration"], aspect: "3/4", col: ["#201828", "#402858"], icon: "Portrait" },
     { id: 19, src: "/art/frPregnancy.png", title: "Feyre and Rhysand - Pregnancy", tags: ["Fanart", "ACOTAR", "Simple"], aspect: "3/4", col: ["#201828", "#402858"], icon: "Portrait" },
     { id: 20, src: "/art/fr.png", title: "Feyre and Rhysand", tags: ["Fanart", "ACOTAR", "Semi"], aspect: "5/4", col: ["#201828", "#402858"], icon: "Portrait" },
+    { id: 21, src: "/art/sGirl.png", title: "Study", tags: ["Study", "Simple"], aspect: "3/4", col: ["#201828", "#402858"], icon: "Portrait" },
+    { id: 22, src: "/art/sDW.png", title: "Study - Dean Winchester", tags: ["Study"], aspect: "16/10", col: ["#1a2838", "#184060"], icon: "Portrait" },
 ];
 
 // commission availability
