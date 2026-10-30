@@ -17,6 +17,9 @@ export default function ContactPage() {
           title="Say hi!"
           sub="For all inquiries, you can reach me on aiphos.s.art@gmail.com"
         />
+        <a className="btn btn-filled" href="mailto:aiphos.s.art@gmail.com">
+          aiphos.s.art@gmail.com
+        </a>
       </div>
     </div>
   );
