@@ -394,9 +394,9 @@ export default function CommissionsPage() {
             <p style={{ color: C.mid, fontSize: '.83rem', fontWeight: 300, lineHeight: 1.7, marginBottom: 20 }}>
               By commissioning me you agree to these terms. Last updated April 2026.
             </p>
-            <button className="btn btn-filled" onClick={() => navigate('/contact')}>
+            <a className="btn btn-filled" href="mailto:aiphos.s.art@gmail.com?subject=Commission%20inquiry">
               Ready to commission? Let's talk ✦
-            </button>
+            </a>
           </div>
         </div>
 
